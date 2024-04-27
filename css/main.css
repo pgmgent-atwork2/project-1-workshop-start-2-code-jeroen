@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #07192f;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+  color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vh;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+.grid__box {
+  width: calc(100%/3);
+  height: calc(100%/3);
+  border: 2px solid aliceblue;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.players {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  margin: 2rem auto;
+}
+
+.button {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: aliceblue;
+  text-decoration: none;
+  background-color: red;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  width: max-content;
+}
+
+.win {
+  position: absolute;
+  left:50%;
+  top:50%;
+  background-color: aliceblue;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+}
+
+.message {
+  text-align: center;
+  color: #07192f;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
