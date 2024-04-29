@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Instructions</title>
+    <link rel="stylesheet" href="../css/instructions.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">Speel Tic Tac Toe</a>
+        <div class="logo">Tic Tac Toe</div>
+        <div>gemaakt door <a href="https://github.com/pgm-jerodeno">Jeroen Denoyette</a></div>
+    </header>
+    <div class="container">
+        <h1>Workshop - Start To Code</h1>
+        <div>
+            <p>We gaan een spelletje Tic Tac Toe maken!</p>
+            <img src="../images/TicTacToe.png" alt="Tic Tac Toe">
+            <div>
+                <p>Daarvoor hebben we drie codetalen nodig</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <p>Geen paniek, we houden de code eenvoudig, maar maken wel iets interactief!</p>
+            </div>
+        </div>
+        <div>
+            <h2>STAP 1 - MAPPEN EN BESTANDEN</h2>
+            <p>We hebben een code-editor nodig. In de workshop gebruiken we <a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code.</a></p>
+            <ul>
+                <li>
+                    <strong>1.1</strong> Maak een nieuwe map aan (vb op je bureaublad) en geef als naam
+                    <span class="highlight">TicTacToe</span><br>
+                    <img src="../images/1.1-folder-aanmaken.png" alt="Map aanmaken">
+                </li>
+                <li>
+                    <strong>1.2</strong> Open het programma <a target="_blank" href="https://code.visualstudio.com/">Visual Studio Code.</a> en open de folder
+                    die je zopas aangemaakt hebt.<br>
+                    <img src="../images/1.2-folder-openen.png" alt="VS Code Folder">
+                </li>
+                <li>
+                    <strong>1.3</strong> Bouw onderstaande mappen- en bestandenstructuur aan<br>
+                    <img src="../images/1.3-mappenstructuur.png" alt="VS Code Folder Structure">
+                </li>
+                <li>
+                    <strong>1.4</strong> Installeer de live server extensie in Visual Studio Code<br>
+                    <img src="../images/1.4-live-server.png" alt="VS Code Live Server">
+                </li>
+                <li>
+                    <strong>1.5</strong> Start de live server door rechtsonder de blauwe balk te klikken
+                    op <span class="highlight">Go Live</span><br>
+                    Jouw standaard browser zal nu gestart worden en je zal een blanco webpagina zien!
+                </li>
+                <li><span class="highlight">Goed gedaan!</span></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>STAP 2 - HTML &amp; CSS</h2>
+            <p>Tijd om te coderen, zodat we meer te zien krijgen dan een witte webpagina!</p>
+            <ul>
+                <li>
+                    <strong>2.1</strong> Kopieer onderstaande code in jouw
+                    <code>index.html</code>-bestand. Bewaar vervolgens dat bestand.<br>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/1/embedded/html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    Dit is een basis-structuur waarin we verder werken.
+                </li>
+
+                <li>
+                    <strong>2.2</strong> Kopieer onderstaande code in jouw
+                    <code>main.css</code>-bestand. Bewaar vervolgens dat bestand.<br>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/2/embedded/css/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    Dit bevat alvast een aantal basisstijlen die we later zullen nodig hebben voor de
+                    look &amp; feel van onze app.
+                </li>
+
+                <li>
+                    <strong>2.3</strong> Bekijk het resultaat in de browser (de url is
+                    hoogstwaarschijnlijk: <a href="http://127.0.0.1:5500/">http://127.0.0.1:5500/</a>).<br>
+                    Als alles goed is, ziet het er nu zo uit. Een volledig gekleurd vlak.<br>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/1/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                </li>
+
+                <li>
+                    <strong>2.4</strong> Laten we het eens van kleur veranderen. Hiervoor moeten we de
+                    kleurwaarde veranderen.
+                    Zoek naar <code> background-color: orange;</code> en verander <code>orange;</code>
+                    naar bijvoorbeeld <code>darkslateblue;</code>
+                    De achtergrond is nu blauw-paarsachtig.<br>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/3/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                </li>
+                <li>
+                    <strong>2.5</strong> We hebben nu wat inhoud nodig voor onze webpagina.<br>
+                    Voeg onderstaande code toe, en plaats ze tussen de openings <code>&lt;body&gt;</code>-tag en sluitings <code>&lt;/body&gt;</code>-tag
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/4/embedded/html/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    Je zal nu een Tic Tac Toe raster zien verschijnen.
+                    <iframe width="100%" height="600" src="//jsfiddle.net/qjvhe7pa/4/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>STAP 3 - INTERACTIVITEIT MET JAVASCRIPT</h2>
+            <p>Nu moeten we nog zorgen dat we het spelletje ook kunnen spelen.</p>
+            <ul>
+                <li>
+                    <strong>3.1</strong> Eerst en vooral moeten we de link leggen naar het
+                    JavaScript-bestand.<br>
+                    Voeg deze regel code toe, onderaan net voor de sluitings-body-tag.<br>
+                    <code>&lt;script src="./scripts/app.js"&gt;&lt;/script&gt;</code>
+                </li>
+
+                <li>
+                    <strong>3.2</strong> Ga naar het bestand <code>app.js</code> en zet er het volgende
+                    in:<br>
+                    <code>alert('Hello world')</code><br>
+                    Bewaar het bestand en kijk wat er in de browser gebeurt (als je deze herlaadt)<br>
+                    <img src="../images/3.2-alert.png" alt="VS Code Folder Structure">
+                </li>
+
+                <li>
+                    <strong>3.3</strong> Als het werkt, mag je de regel terug wissen, we weten nu dat
+                    ons JavaScript-bestand uitgevoerd wordt :)
+                </li>
+
+                <li>
+                    <strong>3.4</strong> Kopieer onderstaande code naar het <code>app.js</code> bestand. In deze code maken we een array die de ingevulde waarden van het speelveld bijhoudt.<br>
+                    Alle waarden starten op <code>null</code>, dit betekent dat er geen waarde is toegekend. We leggen ook vast dat de actieve speler <span class="highlight">Speler 1</span> is.
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/6/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                </li>
+
+                <li>
+                    <strong>3.5</strong> Plak nu het volgende stukje code onder de al aanwezige code in het <code>app.js</code> bestand.<br>
+                    De eerste functie zorgt ervoor dat het spel zal registreren als je in 1 van de vakjes klikt. De 2de functie zal dan een waarde "X" of "O" toekenen aan de array die we daarnet gemaakt hebben.<br>
+                    Je kan nakijken of dit werkt door in je browser rechts te klikken en <span class="highlight">inspect</span> te kiezen. Er zal een schermpje openen aan de rechterkant van je browser. Als je daar op <span class="highlight">Console</span> klikt, dan zal je de array zien met de toegekende waarde.
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/7/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <img class="sc" src="../images/3.5-registerClick.png" alt="Console in browser">
+                </li>
+
+                <li>
+                    <strong>3.6</strong> We willen uiteraard de X'en en O's in ons raster zien verschijnen. De volgende code zal hier voor zorgen.<br>
+                    Plak deze code onder de <code>setGridValue</code> functie. Vervang in de <code>setGridValue</code> functie de <code>console.log(gridValues);</code> lijn door <code>fillGridHTML(gridValues);</code>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/9/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                </li>
+
+                <li>
+                    <strong>3.7</strong> Het spel werkt nu. Maar het is niet echt eenvoudig om te zien wie er gewonnen heeft. Door volgende code toe te voegen kunnen we dit oplossen.<br>
+                    Deze code zal steeds controlleren of er iemand gewonnen heeft en een melding laten verschijnen wanneer dit het geval is.
+                    <iframe width="100%" height="300" src="//jsfiddle.net/qjvhe7pa/10/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                </li>
+
+                <li>
+                    <span class="highlight">Proficiat!</span> Je hebt net een werkend spelletje Tic Tac Toe gemaakt!<br>
+                    Veel speelplezier!
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div>© Arteveldehogeschool Gent</div>
+        <div>2024</div>
+    </footer>
+</body>
+</html>

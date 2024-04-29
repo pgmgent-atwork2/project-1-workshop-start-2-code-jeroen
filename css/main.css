@@ -6,9 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #07192f;
-  min-height: 100vh;
-  padding-bottom: 4rem;
+  background-color: darkslateblue;
   color: aliceblue;
 }
 
