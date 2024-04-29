@@ -39,7 +39,7 @@ const gridValues = [
 
 var activePlayer = 1;
 
-function updateGridValues(gridValues) {
+function registerClick(gridValues) {
   document.querySelectorAll(".grid__box").forEach((gridBox) => {
     gridBox.addEventListener('click', () => {setGridValue(gridValues, gridBox.id)})
   })
@@ -58,10 +58,10 @@ function setGridValue(gridValues, selectedId) {
         }
       }
   }});
-  generateGridValuesHTML(gridValues);
+  fillGridHTML(gridValues);
 }
 
-function generateGridValuesHTML(gridValues) {
+function fillGridHTML(gridValues) {
   document
     .querySelectorAll(".grid__box")
     .forEach((gridBox, index) => {
@@ -114,4 +114,4 @@ function showWin(message) {
   $win.classList.remove('hidden');
 }
 
-updateGridValues(gridValues);
+registerClick(gridValues);
